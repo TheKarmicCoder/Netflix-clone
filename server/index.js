@@ -41,7 +41,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
   });
 
-app.listen(8800, () => {
+app.listen(3000, () => {
     console.log('server is running');
 });
 
