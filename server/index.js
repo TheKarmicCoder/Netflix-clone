@@ -18,7 +18,7 @@ dotenv.config();
 
 app.use(cors({ origin: "http://localhost:3000" })); 
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname, 'client', 'build')));
+app.use(express.static(path.join(__dirname, 'client', 'build', "index.html")));
 
 
 mongoose.connect(process.env.MONGO_URL , {
