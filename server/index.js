@@ -18,7 +18,7 @@ dotenv.config();
 
 app.use(cors({ origin: "http://localhost:3000" })); 
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname, 'client', 'build', "index.html")));
+app.use(express.static(path.join(__dirname, 'client', 'build', )));
 
 
 mongoose.connect(process.env.MONGO_URL , {
@@ -41,7 +41,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
   });
 
-app.listen(3000, () => {
+app.listen(8800, () => {
     console.log('server is running');
 });
 
