@@ -16,7 +16,7 @@ const path = require("path")
 dotenv.config();
 
 
-app.use(cors({ origin: "http://localhost:3000" })); 
+app.use(cors({ origin: "netflix-clone-frontend-psi.vercel.app" })); 
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, 'client', 'build', )));
 
